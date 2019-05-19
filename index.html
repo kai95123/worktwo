@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta name="viewport" content="width=device-width" initial-scale="1">
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="css/jquery.mobile-1.4.5.min.css">
+	<script src="js/jquery-2.1.0.min.js"></script>
+	<script src="js/jquery.mobile-1.4.5.min.js"></script>
+	<script>
+		//註冊監聽
+		$(function(){
+			$("#ok-btn").bind("click" , function(){
+				alert("帳號: "+$("#username").val()+"密碼: "+$("#mypassword").val()+"電話: "+$("#number").val()+"電子信箱: "+$("#myemail").val()+"留言: "+$("#textarea").val()+"生日: "+$("#bday").val()+"年齡: "+$("#old").val());	
+			});
+		});		
+	</script>
+</head>
+<body>
+	<!-- 主頁 -->
+	<div data-role="page" id="home">
+		<div data-role="header" data-theme="b"> 
+			<h1>可晴開心農場</h1>
+		</div>
+		<div role="main" class="ui-content">
+			<img src="image-o/logo.gif" width="100%" alt="">
+			<h4>理念識別 (Mind Identity，簡稱MI)</h4>
+			<p>可晴開心農場所要傳達的宗旨就是讓客戶買得開心，吃的安心「Organic farming」意味就是有機種植消費者健康讓我們來把關。</p>
+			<h4>行為識別 (Behavior Identity，簡稱BI)</h4>
+			<p>可晴開心農場對待消費者就跟自己家人一樣，消費者吃到食材我們也是當家常便飯，有著這樣的信念，才能有好的品質與靠戶良好的關西。</p>
+			<h4>視覺識別 (Visual Identity，簡稱VI) </h4>
+			<p>可晴開心農場不僅只是在網路平台上作銷售模式，近年來影音媒體的崛起YouTuber，我們更是自己拍紀錄片，讓消費者更能了解有機產品的生產過程，更間接做到品牌曝光的功效。</p>
+		</div>
+		<div data-role="footer" data-position="fixed" data-theme="b">
+			<div data-role="navbar" data-iconpos="left">
+				<ul>
+					<li><a href="#home" data-icon="home" class="ui-btn-active">首頁</a></li>
+					<li><a href="#reg" data-icon="user" data-transition="flip">會員註冊</a> </li>
+					<li><a href="#product" data-icon="shop" data-transition="fade">產品介紹</a></li>
+					<li><a href="#about" data-icon="phone" data-transition="pop">關於我們</a></li>  
+				</ul>
+			</div> 
+		</div>
+	</div>
+	<!-- 註冊頁 -->
+	<body>
+	<div data-role="page" id="reg">
+		<div data-role="header" data-theme="b"> 
+			<a data-role="button" data-rel="back" data-theme="a" data-icon="back">返回</a>
+			<h1>會員註冊</h1>
+			<a href="#logout" data-role="button" class="ui-btn-right" data-icon="delete" data-theme="a">關閉</a>
+		</div>
+		<div role="main" class="ui-content">
+			<!-- 帳號 -->
+			<div data-role="fieldcontain">
+				<label for="username">帳號</label>
+				<input type="text" name="username" id="username" placeholder="請輸入帳號">
+			</div>
+			<!-- 密碼 -->
+			<div data-role="fieldcontain">
+				<label for="mypassword">密碼</label>
+				<input type="password" name="mypassword" id="mypassword" placeholder="請輸入密碼">
+			</div>
+			<!-- 電話 -->
+			<div data-role="fieldcontain">
+				<label for="number">電話</label>
+				<input type="tel" name="number" id="number" placeholder="請輸入電話號碼">
+			</div>
+			<!-- 電子信箱 -->
+			<div data-role="fieldcontain">
+				<label for="myemail">電子信箱</label>
+				<input type="email" name="myemail" id="myemail" placeholder="請輸入電子信箱">
+			</div>
+			<!-- 留言 -->
+			<div data-role="fieldcontain">
+				<label for="textarea">留言</label>
+				<textarea cols="80" rows="8" name="textarea" id="textarea" placeholder="請輸入留言"></textarea>
+			</div>
+			<!-- 生日 -->
+			<div data-role="fieldcontain">
+				<label for="bday">生日</label>
+				<input type="date" name="bday" id="bday">
+			</div>
+			<!-- 年齡 -->
+			<div data-role="fieldcontain">
+				<label for="old">年齡</label>
+				<input type="range" name="old" id="old" step="1" min="1" max="100" value="18">
+			</div>
+			<div class="ui-grid-a">
+				<div class="ui-block-a">
+					<a href="#" data-role="button" data-theme="b" data-icon="info">取消</a>
+				</div>
+				<div class="ui-block-b">
+					<a href="#" data-role="button" data-theme="b" data-icon="info" id="ok-btn">送出</a>
+				</div>
+			</div>
+		</div>
+
+		<div data-role="footer" data-position="fixed" data-theme="b">
+			<div data-role="navbar" data-iconpos="left">
+				<ul>
+					<li><a href="#home" data-icon="home">首頁</a></li>
+					<li><a href="#reg" data-icon="user" data-transition="flip" class="ui-btn-active">會員註冊</a> </li>
+					<li><a href="#product" data-icon="shop" data-transition="fade">產品介紹</a></li>
+					<li><a href="#about" data-icon="phone" data-transition="pop">關於我們</a></li> 
+				</ul>
+			</div> 
+		</div>
+	</div>
+	<!-- 產品介紹 -->
+	<div data-role="page" id="product">
+		<div data-role="header" data-theme="b">
+			<a data-role="button" data-rel="back" data-theme="a" data-icon="back">返回</a>
+			<h1>產品介紹</h1>
+		</div>
+		<div role="main" class="ui-content">
+			<ul data-role="listview" data-inset="ture" data-filter="true" data-filter-placeholder="請填入您想查詢的資訊">
+				<li data-role="list-divider" data-theme="b"> 
+					<h1><a href="javascript:alert('歡迎來到可晴開心農場!!')">果菜類</a></h1>
+				</li>
+				<li data-icon="star">
+					<a href="#">
+					<img src="image-o/DSC05150木瓜.gif" alt="">
+					<h1>木瓜</h1>
+					<p>木瓜的營養素非常豐富，一顆小型木瓜（約150克）中，維生素C含量就高達93.9毫克，是成人每日所需的157%。除了具有抗氧化的好處之外，也有研究指出，飲食中維生素C含量較低的人，罹患關節炎的機率是維生素C充足的人的3倍。<span class="ui-li-count">69</span></p>
+				</a><a href="#">販售金額與地點</a></li>
+				<li data-icon="star">
+					<a href="#">
+					<img src="image-o/DSC05157南瓜2.gif" alt="">
+					<h1>栗子南瓜</h1>
+					<p>南瓜營養豐富，含有膳食纖維、蛋白質、胡蘿蔔素、天門冬素、果膠、澱粉、碳水化合物、維他命A、B1、B2、C、F以及礦物質鉀、磷、鈣、鐵、鋅、鎂、鈷、硒等，有助於抗氧化、促進發育，對保護胃黏膜與降低血糖有幫助。 <span class="ui-li-count">55</span></p>
+				</a><a href="#">販售金額與地點</a></li>
+				<li data-icon="star">
+					<a href="#">
+					<img src="image-o/DSC05088.JPG" alt="">
+					<h1>牛番茄</h1>
+					<p>牛番茄又名陽光番茄。體態壯碩如牛因而命名，又一說多歐美人士多用此番茄來煮牛肉湯因而稱牛番茄。依照英文名稱，後者較為可信。<span class="ui-li-count">66</span></p>
+				</a><a href="#">販售金額與地點</a></li>
+			<ul data-role="listview" data-inset="ture">
+				<li data-role="list-divider" data-theme="b"> 
+					<h1>根菜類</h1>
+				</li>
+				<li data-icon="star">
+					<a href="#">
+					<img src="image-o/DSC05161玉米.gif" alt="">
+					<h1>玉米</h1>
+					<p>「玉米」自然鮮嫩、粒粒飽滿，如同珍珠般的外型，是許多人愛吃的食物。玉米含有類胡蘿蔔素及葉黃素，有助於保護眼睛、而膳食纖維可以改善便祕，是現代人最健康的蔬食選擇。<span class="ui-li-count">29</span></p>
+				</a><a href="http://www.webike.tw/motomarket/detail/20170315D009319">販售金額與地點</a></li>
+				<li data-icon="star">
+					<a href="#">
+					<img src="image-o/IMG_8866.JPG" alt="">
+					<h1>栗子地瓜</h1>
+					<p>實踐大學食品營養系的教授楊瓊花表示，最近國際上一個預防醫學的網站上，大力推崇地瓜（Sweat Potato）的營養價值，並讚譽它為「近乎完美的食物」，因為它的熱量低，但是它的蛋白質比雞蛋還要高，地瓜同時還擁有胡蘿蔔素、銅、維他命C、E以及愈來愈受到重視的高纖維。<span class="ui-li-count">26</span></p>
+				</a><a href="#">販售金額與地點</a></li>
+			</ul>
+			<ul data-role="listview" data-inset="ture">
+				<li data-role="list-divider" data-theme="b"> 
+					<h1>米'</h1>
+				</li>
+				<li data-icon="star">
+					<a href="#">
+					<img src="image-o/rice.jpg" alt="">
+					<h1>白米</h1>
+					<p>台稉9號米榮登市場上最受歡迎的稻米品種，口感可媲美日本越光米。<span class="ui-li-count">99</span></p>
+				</a><a href="#">販售金額與地點</a></li>
+				<li data-icon="star">
+					<a href="#">
+					<img src="image-o/rice2-3.jpg" alt="">
+					<h1>糙米</h1>
+					<p>對慢性疾病患者而言，常吃糙米飯，也能延緩餐後血糖上升，降低高膽固醇血症，預防高血壓。<span class="ui-li-count">21</span></p>
+				</a><a href="#">販售金額與地點</a></li>
+				<li data-icon="star">
+					<a href="#">
+					<img src="image-o/rice03.jpg" alt="">
+					<h1>米麩</h1>
+					<p>米糠中所含有的食物纖維，可以有效防止膽固醇被人體吸收，而且可以降低血液中膽固醇的含量。<span class="ui-li-count">16</span></p>
+				</a><a href="#">販售金額與地點</a></li>
+			</ul>
+		</div>
+		<div data-role="footer" data-position="fixed" data-theme="b">
+			<div data-role="navbar" data-iconpos="left">
+				<ul>
+					<li><a href="#home" data-icon="home">首頁</a></li>
+					<li><a href="#reg" data-icon="user" data-transition="flip">會員註冊</a> </li>
+					<li><a href="#product" data-icon="shop" class="ui-btn-active" data-transition="fade">產品介紹</a></li>
+					<li><a href="#about" data-icon="phone" data-transition="pop">關於我們</a></li> 
+				</ul>
+			</div> 
+		</div>
+	</div>
+	<!-- 關於我們 -->
+	<div data-role="page" id="about" data-theme="b" class="my-page">
+		<div data-role="header">
+			<a data-role="button" data-rel="back" data-theme="a" data-icon="back">返回</a>
+			<h1>關於我們</h1>
+		</div>
+		<div role="main" class="ui-content">
+			<ul data-role="listview" data-inset="ture" data-filter="true" data-filter-placeholder="請填入您想查詢的資訊">
+				<li data-role="list-divider" data-theme="a"> 
+					<h1><a href="javascript:alert('歡迎來到可晴開心農場!!')">可晴開心農場</a></h1>
+					<img src="image-o/DSC05179.JPG" width="100%">
+				</li>
+				<li data-icon="star">
+					<a href="">
+					<h1>電話</h1>
+					<p>0919-692227</span></p>
+					<p class="ui-li-aside">go</p>
+				</a><a href="#">販售金額與地點</a></li>
+				<li data-icon="star">
+					<a href="#">
+					<h1>電子信箱</h1>
+					<p>kai994@gmail.com</p>
+				</a><a href="#">販售金額與地點</a></li>
+				<li data-icon="star">
+					<a href="#">
+					<h1>住址</h1>
+					<p>彰化縣芬園鄉慶功街111巷</p>
+				</a><a href="#">販售金額與地點</a></li>
+				<li data-icon="star">
+					<a href="#">
+					<h1>Facebook</h1>
+					<p>kai88451</p>
+				</a><a href="#">販售金額與地點</a></li>
+			</ul>
+		<div data-role="footer" data-position="fixed">
+			<div data-role="navbar" data-iconpos="left">
+				<ul>
+					<li><a href="#home" data-icon="home">首頁</a></li>
+					<li><a href="#reg" data-icon="user" data-transition="flip">會員註冊</a> </li>
+					<li><a href="#product" data-icon="shop" data-transition="fade">產品介紹</a></li>
+					<li><a href="#about" data-icon="phone" class="ui-btn-active" data-transition="pop">關於我們</a></li> 
+				</ul>
+			</div> 
+		</div>
+		</div>
+	</div>
+</body>
+</html>
+</body>
+</html>
